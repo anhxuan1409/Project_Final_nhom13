@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-    <link rel="shortcut icon" href="/documents/unnamed(1).png" type="image/x-icon" />
+    <link rel="shortcut icon" href="documents/unnamed(1).png" type="image/x-icon" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="/assets/login.css">
+    <link rel="stylesheet" href="assets/login.css">
     <link rel="stylesheet" href="assets/grid.css">
     <title>Foody</title>
 </head>
@@ -18,7 +18,7 @@
     <header class="container-fluid">
         <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex align-items-center d-flex justify-content-center">
             <div class="container-fluid" style="margin-left: 30%;">
-                <a class="navbar-brand " href="home.html"><img src="/documents/foody.png" class="img-fluid"></a>
+                <a class="navbar-brand " href="#"><img src="documents/foody.png" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
               </button>
@@ -53,15 +53,11 @@
                             </form>
 
                             <ul class="navbar-nav  ">
-                                <li class="nav-item dropdown  mt-sm-1 " style="font-size: 18px;">
-                                    <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Username</a>
-                                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <li><a class="dropdown-item" href="#">Đăng kí người bán</a></li>
-                                        <li><a class="dropdown-item" href="index.html">Đăng xuất</a></li>
-                                    </ul>
+                                <li class="nav-item  mt-sm-1 " style="font-size: 18px;">
+                                    <a class="nav-link active" aria-current="page" href="login.php">Đăng nhập</a>
                                 </li>
                                 <li class="nav-item  mt-sm-1 " style="font-size: 20px;">
-                                    <a class="nav-link active" href="cart.html"><i class="far fa-plus-square"></i></a>
+                                    <a class="nav-link active" href="#"><i class="far fa-plus-square" onclick="alert('Bạn chưa đăng nhập!');"></i></a>
                                 </li>
                             </ul>
                     </ul>
@@ -81,19 +77,19 @@
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="/documents/slide/foody1.png" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="documents/slide/foody1.png" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="/documents/slide/foody2.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="documents/slide/foody2.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="/documents/slide/foody3.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="documents/slide/foody3.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
@@ -165,15 +161,18 @@
                     </div>
                 </nav>
 
-                <div class="row" style="margin-top:48px;">
+                <div class="row" style="margin-top:40px;">
 
-                    <div class="col-sm-3 col-lg-2.5">
-                        <div class="d-flex justify-content-center container">
+                    <div class="col-sm-3 col-lg-2.5 zoom zoom">
+                        <div class="d-flex justify-content-center container ">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/pizza-ha-noi.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/pizza-ha-noi.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Pizza Hoàng Yến</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Pizza</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
@@ -181,13 +180,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/thit_trau_gac_bep.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/thit_trau_gac_bep.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Thịt trấu gác bếp</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Thịt trấu gác bếp</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>300.000 VND</span></div>
@@ -195,13 +197,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/7e0af56e-trà-sữa-tiger-sugar.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/7e0af56e-trà-sữa-tiger-sugar.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Tiger Sugar</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Tiger Sugar</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>50.000 VND</span></div>
@@ -209,13 +214,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/banh-mi-thit-bo-nuong.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh-mi-thit-bo-nuong.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Bánh mì bò</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Bánh mì bò</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>15.000 VND</span></div>
@@ -225,15 +233,18 @@
 
                 </div>
 
-                <div class="row" style="margin-top:48px;">
+                <div class="row" style="margin-top:40px;">
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/banh_trang.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh_trang.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Bánh tráng</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Bánh tráng</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>10.000 VND</span></div>
@@ -241,13 +252,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/bun-thai-hai-san.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/bun-thai-hai-san.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Bún hải sản</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Bún hải sản</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
@@ -255,13 +269,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/banh-da-tron-thumbnail.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh-da-tron-thumbnail.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Bánh đa A. Béo</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Bánh đa A. Béo</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>40.000 VND</span></div>
@@ -269,13 +286,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/ga_kfc.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/ga_kfc.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">KFC Định Công</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">KFC Định Công</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
@@ -285,15 +305,18 @@
 
                 </div>
 
-                <div class="row" style="margin-top:48px;">
+                <div class="row" style="margin-top:40px;">
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/mua-cafe-trung-nguyen-2.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/mua-cafe-trung-nguyen-2.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Cafe Trung Nguyên</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Cafe Trung Nguyên</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>20.000 VND</span></div>
@@ -301,13 +324,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/toboki.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/toboki.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Tokbokki</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Tokbokki</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>25.000 VND</span></div>
@@ -315,13 +341,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/xoi-yen.jpg">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/xoi-yen.jpg">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Xôi Yến</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Xôi Yến</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>30.000 VND</span></div>
@@ -329,13 +358,16 @@
                         </div>
                     </div>
 
-                    <div class="col-sm-3 col-lg-2.5">
+                    <div class="col-sm-3 col-lg-2.5 zoom">
                         <div class="d-flex justify-content-center container">
                             <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid" src="documents/images/hl.png">
+                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/hl.png">
                                     <div>
-                                        <button type="button" class="btn btn-danger mt-1 mb-1"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-0 text-black-50">Cream HL</h6>
+                                        <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán Bà Yến</h5>
+                                        </a>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <h6 class="mt-3 text-black-50">Cream HL</h6>
                                     </div>
                                 </div>
                                 <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>50.000 VND</span></div>
