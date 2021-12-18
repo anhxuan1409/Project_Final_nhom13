@@ -1,3 +1,9 @@
+<?php
+session_start();
+if (!isset($_SESSION['LoginSl'])) {
+    header("location:login_saler.php");
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -18,13 +24,37 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 5px;">
         <div class="container-fluid" style="justify-content: center;justify-items: center;">
-            <a class="navbar-brand" href="home.html"><img src="documents/foody.png" class="img-fluid"></a>
+            <a class="navbar-brand" href="home.php"><img src="documents/foody.png" class="img-fluid"></a>
         </div>
     </nav>
 
     <main>
         <div class="container container-fluid">
-            <h5 class="text-center mt-5 mb-5 " style="font-size:18px"><a href="" class="text-danger" style="text-decoration: none">Tên Shop</a></h5>
+            <h5 class="text-center mt-5 mb-5 " style="font-size:18px"><a href="" class="text-danger" style="text-decoration: none">
+                    <?php
+                    // Bước 01: Kết nối Database Server
+                    $conn = mysqli_connect('localhost', 'root', '', 'foody');
+                    if (!$conn) {
+                        die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
+                    }
+                    // Bước 02: Thực hiện truy vấn
+                    $sql = "SELECT * FROM db_saler";
+                    $result = mysqli_query($conn, $sql);
+                    // Bước 03: Xử lý kết quả truy vấn
+                    if (mysqli_num_rows($result) > 0) {
+                        while ($row = mysqli_fetch_assoc($result)) {
+                    ?>
+                            <button class="btn btn-outline-danger">
+                                <?php echo $row['saler_name']; ?>
+                                's Shop
+                            </button>
+
+
+                    <?php
+                        }
+                    }
+                    ?>
+                </a></h5>
             <table class="table" style="font-size:13px">
                 <thead>
                     <tr>
@@ -36,19 +66,16 @@
                     </tr>
                 </thead>
             </table>
+            <div class="d-flex align-items-center d-flex justify-content-center mb-3">
+                <?php if (isset($_SESSION['LoginSl'])) {
+                    echo "<a class='btn btn-outline-danger' href='logout_saler.php'>Đăng xuất</a>";
+                } ?></a>
+            </div>
+
         </div>
     </main>
 
 
-    <footer class="footer mb-0">
-        <div class="wrapper-footer mb0 ">
-            <span>Công Ty Cổ Phần Foody, Lầu G, Tòa nhà Jabes 1, 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TP.HCM</span>
-            <span>Giấy CN ĐKDN số 0311828036 do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012, sửa đổi lần thứ 23, ngày 10/12/2020</span>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
-
-</body>
-
-</html>
+    <?php
+    include("template/footer.php");
+    ?>

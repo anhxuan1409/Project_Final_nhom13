@@ -20,8 +20,8 @@
             <div class="container-fluid" style="margin-left: 30%;">
                 <a class="navbar-brand " href="#"><img src="documents/foody.png" class="img-fluid"></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-              </button>
+                    <span class="navbar-toggler-icon"></span>
+                </button>
 
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav  ">
@@ -33,33 +33,33 @@
                                 <li><a class="dropdown-item" href="#">TP. Hò Chí Minh</a></li>
                                 <li>
                             </ul>
-                            </li>
+                        </li>
 
-                            <li class="nav-item dropdown  mt-sm-1 " style="font-size: 18px;">
-                                <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Loại hình</a>
-                                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Đồ ăn</a></li>
-                                    <li><a class="dropdown-item" href="#">Đồ uống</a></li>
-                                </ul>
-                            </li>
-
-                            <form class="d-flex">
-                                <div class="input-group ">
-                                    <input type="text" class="form-control mt-sm-2" aria-label="Recipient's username" aria-describedby="basic-addon2" style="height: 30px;">
-                                    <div class="input-group-append">
-                                        <span class="input-group-text mt-md-2" id="basic-addon2"><i class="fas fa-search"></i></span>
-                                    </div>
-                                </div>
-                            </form>
-
-                            <ul class="navbar-nav  ">
-                                <li class="nav-item  mt-sm-1 " style="font-size: 18px;">
-                                    <a class="nav-link active" aria-current="page" href="login.php">Đăng nhập</a>
-                                </li>
-                                <li class="nav-item  mt-sm-1 " style="font-size: 20px;">
-                                    <a class="nav-link active" href="#"><i class="far fa-plus-square" onclick="alert('Bạn chưa đăng nhập!');"></i></a>
-                                </li>
+                        <li class="nav-item dropdown  mt-sm-1 " style="font-size: 18px;">
+                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Loại hình</a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Đồ ăn</a></li>
+                                <li><a class="dropdown-item" href="#">Đồ uống</a></li>
                             </ul>
+                        </li>
+
+                        <form class="d-flex">
+                            <div class="input-group ">
+                                <input type="text" class="form-control mt-sm-2" aria-label="Recipient's username" aria-describedby="basic-addon2" style="height: 30px;">
+                                <div class="input-group-append">
+                                    <span class="input-group-text mt-md-2" id="basic-addon2"><i class="fas fa-search"></i></span>
+                                </div>
+                            </div>
+                        </form>
+
+                        <ul class="navbar-nav  ">
+                            <li class="nav-item  mt-sm-1 " style="font-size: 18px;">
+                                <a class="nav-link active" aria-current="page" href="login.php">Đăng nhập</a>
+                            </li>
+                            <li class="nav-item  mt-sm-1 " style="font-size: 20px;">
+                                <a class="nav-link active" href="#"><i class="far fa-plus-square" onclick="alert('Bạn chưa đăng nhập!');"></i></a>
+                            </li>
+                        </ul>
                     </ul>
                 </div>
 
@@ -96,12 +96,12 @@
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
                 </button>
                 <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
                 </button>
             </div>
         </div>
@@ -115,7 +115,8 @@
                 <nav class="category" style="font-size: 18px;font-weight: 100; ">
                     <h3 class="category__heading" style="background-color: whitesmoke;">
                         <i class="fas fa-utensils"></i>
-                        <i class="fas category__heading-icon"></i>Danh mục</h3>
+                        <i class="fas category__heading-icon"></i>Danh mục
+                    </h3>
                     <ul class="category-list">
                         <li class="category-item ">
                             <a href="#" class="category-item__link">Khuyễn mãi</a>
@@ -141,7 +142,7 @@
                     <button class="btn btn-secondary btn btn btn-danger btn-sm" style="font-size: 18px;font-weight: 100;color: black;">Mới nhất</button>
                     <div class="btn-group">
                         <button class="btn btn-secondary btn-sm dropdown-toggle btn btn btn-danger" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;font-weight: 100;color: black;">
-                          Ẩm thực
+                            Ẩm thực
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Món Bắc</a></li>
@@ -151,7 +152,7 @@
                     </div>
                     <div class="btn-group">
                         <button class="btn btn-secondary btn-sm dropdown-toggle btn btn btn-danger " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;font-weight: 100;color: black;">
-                          Danh mục
+                            Danh mục
                         </button>
                         <ul class="dropdown-menu">
                             <li><a class="dropdown-item" href="#">Đồ ăn nhanh</a></li>
@@ -381,15 +382,6 @@
         </div>
     </div>
 
-    <footer class="footer mb-0">
-        <div class="wrapper-footer mb0 ">
-            <span>Công Ty Cổ Phần Foody, Lầu G, Tòa nhà Jabes 1, 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TP.HCM</span>
-            <span>Giấy CN ĐKDN số 0311828036 do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012, sửa đổi lần thứ 23, ngày 10/12/2020</span>
-        </div>
-    </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js " integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p " crossorigin="anonymous "></script>
-
-</body>
-
-</html>
+    <?php
+    include("template/footer.php");
+    ?>

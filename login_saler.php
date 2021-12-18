@@ -9,17 +9,7 @@ require "template/header.php";
                 <div style="margin:10px 0;">
                     <h3 class="title"> Đăng nhập FDID </h3>
                 </div>
-                <form class="form-signin" action="process_login.php" method="post">
-                    <div>
-                        <a class="btn btn-lg btn-success btn-block d-flex align-items-center mb-2 d-flex justify-content-center text-center
-                            " style="overflow: hidden;background-color:#4066b0; text-align: center;"> ĐĂNG NHẬP BẰNG FACEBOOK
-                        </a>
-                        <a class="btn btn-lg btn-success btn-block d-flex align-items-center mb-2 mt-2 d-flex justify-content-center text-center
-                            " style="overflow: hidden;background-color:#D34836;"> ĐĂNG NHẬP BẰNG GOOGLE
-                        </a>
-                        <div class="text d-flex align-items-center d-flex justify-content-center text-center mb-2 mt-2">
-                            <span>hoặc bằng email</span>
-                        </div>
+                <form class="form-signin" action="process_login_saler.php" method="post">
                         <div class="form-space input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>
@@ -49,13 +39,6 @@ require "template/header.php";
                             }
 
                             ?>
-                        </div>
-
-                        <div class="p">
-                            <p> Bạn đã có tài khoản tại Foody.vn?<a href="signup.php" class="link"> Đăng ký </a> </p>
-                        </div>
-                        <div class="p">
-                            <p><a href="login_saler.php" class="link"> Đăng nhập người bán</a> </p>
                         </div>
                     </div>
                 </form>
