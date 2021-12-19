@@ -15,6 +15,7 @@ if (!isset($_SESSION['isLoginOK'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
     <link rel="shortcut icon" href="documents/unnamed(1).png" type="image/x-icon" />
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/login.css">
     <link rel="stylesheet" href="assets/grid.css">
@@ -208,7 +209,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Pizza</h6>
                                     </div>
                                 </div>
@@ -225,7 +226,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Thịt trấu gác bếp</h6>
                                     </div>
                                 </div>
@@ -242,7 +243,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Tiger Sugar</h6>
                                     </div>
                                 </div>
@@ -259,7 +260,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Bánh mì bò</h6>
                                     </div>
                                 </div>
@@ -280,7 +281,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Bánh tráng</h6>
                                     </div>
                                 </div>
@@ -297,7 +298,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Bún hải sản</h6>
                                     </div>
                                 </div>
@@ -314,7 +315,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Bánh đa A. Béo</h6>
                                     </div>
                                 </div>
@@ -331,7 +332,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">KFC Định Công</h6>
                                     </div>
                                 </div>
@@ -352,7 +353,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Cafe Trung Nguyên</h6>
                                     </div>
                                 </div>
@@ -369,7 +370,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Tokbokki</h6>
                                     </div>
                                 </div>
@@ -386,7 +387,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Xôi Yến</h6>
                                     </div>
                                 </div>
@@ -403,7 +404,7 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán Bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>
                                         <h6 class="mt-3 text-black-50">Cream HL</h6>
                                     </div>
                                 </div>
@@ -417,6 +418,12 @@ if (!isset($_SESSION['isLoginOK'])) {
             </div>
         </div>
     </div>
+
+    <script type="text/javascript">
+        function t() {
+            swal("Nice!", "Add to cart successfully", "success");
+        }
+    </script>
 
     <?php
     include("template/footer.php");

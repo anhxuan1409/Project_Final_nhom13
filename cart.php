@@ -88,13 +88,6 @@
         </div>
     </div>
 
-    <footer class="footer mb-0">
-        <div class="wrapper-footer mb0 ">
-            <span>Công Ty Cổ Phần Foody, Lầu G, Tòa nhà Jabes 1, 244 đường Cống Quỳnh, phường Phạm Ngũ Lão, Quận 1, TP.HCM</span>
-            <span>Giấy CN ĐKDN số 0311828036 do Sở Kế hoạch và Đầu tư TP.HCM cấp ngày 11/6/2012, sửa đổi lần thứ 23, ngày 10/12/2020</span>
-        </div>
-    </footer>
-
-</body>
-
-</html>
+    <?php
+    include("template/footer.php");
+    ?>
