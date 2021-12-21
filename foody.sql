@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th12 18, 2021 lúc 03:03 PM
+-- Thời gian đã tạo: Th12 21, 2021 lúc 02:49 AM
 -- Phiên bản máy phục vụ: 10.4.21-MariaDB
 -- Phiên bản PHP: 8.0.12
 
@@ -20,6 +20,20 @@ SET time_zone = "+00:00";
 --
 -- Cơ sở dữ liệu: `foody`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `db_admin`
+--
+
+CREATE TABLE `db_admin` (
+  `admin_nickname` varchar(50) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `admin_pass` varchar(30) COLLATE utf8mb4_vietnamese_ci NOT NULL,
+  `saler_id` int(10) UNSIGNED NOT NULL,
+  `user_id` int(10) UNSIGNED NOT NULL,
+  `invoice_id` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_vietnamese_ci;
 
 -- --------------------------------------------------------
 
@@ -70,6 +84,14 @@ INSERT INTO `db_user` (`user_id`, `user_name`, `user_email`, `user_pass`, `user_
 --
 
 --
+-- Chỉ mục cho bảng `db_admin`
+--
+ALTER TABLE `db_admin`
+  ADD PRIMARY KEY (`admin_nickname`),
+  ADD KEY `saler_id` (`saler_id`),
+  ADD KEY `user_id` (`user_id`);
+
+--
 -- Chỉ mục cho bảng `db_saler`
 --
 ALTER TABLE `db_saler`
@@ -100,6 +122,17 @@ ALTER TABLE `db_saler`
 --
 ALTER TABLE `db_user`
   MODIFY `user_id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- Các ràng buộc cho các bảng đã đổ
+--
+
+--
+-- Các ràng buộc cho bảng `db_admin`
+--
+ALTER TABLE `db_admin`
+  ADD CONSTRAINT `db_admin_ibfk_1` FOREIGN KEY (`saler_id`) REFERENCES `db_saler` (`saler_id`),
+  ADD CONSTRAINT `db_admin_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `db_user` (`user_id`);
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
