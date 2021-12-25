@@ -64,25 +64,32 @@ if (!isset($_SESSION['isLoginOK'])) {
                         <ul class="navbar-nav  ">
                             <li class="nav-item dropdown  mt-sm-1 " style="font-size: 18px;">
                                 <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+
+                                   
+
                                     <?php
-                                    // Bước 01: Kết nối Database Server
+
                                     $conn = mysqli_connect('localhost', 'root', '', 'foody');
                                     if (!$conn) {
                                         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
                                     }
-                                    // Bước 02: Thực hiện truy vấn
+
                                     $sql = "SELECT * FROM db_user";
                                     $result = mysqli_query($conn, $sql);
-                                    // Bước 03: Xử lý kết quả truy vấn
+
                                     if (mysqli_num_rows($result) > 0) {
                                         while ($row = mysqli_fetch_assoc($result)) {
                                     ?>
-                                            <?php echo $row['user_name']; ?>
-
+                                             <?php echo $row['user_name']; ?>
                                     <?php
                                         }
                                     }
                                     ?>
+
+
+
+                                
+                                    
                                 </a>
                                 <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <li><a class="dropdown-item" href="signup_saler.php">Đăng kí người bán</a></li>
@@ -421,10 +428,10 @@ if (!isset($_SESSION['isLoginOK'])) {
 
     <script type="text/javascript">
         function t() {
-            swal("Nice!", "Add to cart successfully", "success");
+            swal("", "Thêm món thành công!", "success");
         }
     </script>
 
-    <?php
+<?php
     include("template/footer.php");
-    ?>
+?>
