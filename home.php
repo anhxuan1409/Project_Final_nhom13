@@ -1,28 +1,11 @@
 <?php
 session_start();
 include("connection.php");
+include("head.php");
 if (!isset($_SESSION['isLoginOK'])) {
     header("location:login.php");
 }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css">
-    <link rel="shortcut icon" href="documents/unnamed(1).png" type="image/x-icon" />
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="stylesheet" href="assets/login.css">
-    <link rel="stylesheet" href="assets/grid.css">
-    <title>Foody</title>
-</head>
-
-<body>
 
     <header class="container-fluid">
         <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex align-items-center d-flex justify-content-center">
@@ -74,17 +57,10 @@ if (!isset($_SESSION['isLoginOK'])) {
                                         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
                                     }
 
-                                    $sql = "SELECT * FROM db_user";
+                                    $sql = "SELECT * FROM db_user WHERE user_email = '" .  $_SESSION ['isLoginOK'] . "'";
                                     $result = mysqli_query($conn, $sql);
-
-                                    if (mysqli_num_rows($result) > 0) {
-                                        while ($row = mysqli_fetch_assoc($result)) {
-                                    ?>
-                                             <?php echo $row['user_name']; ?>
-                                    <?php
-                                        }
-                                    }
-                                    ?>
+                                    $tmp  = mysqli_fetch_array($result);
+                                    echo $tmp['user_name']; ?>
 
 
 
