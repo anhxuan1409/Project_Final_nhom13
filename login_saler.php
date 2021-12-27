@@ -40,6 +40,9 @@ require "template/header.php";
 
                             ?>
                         </div>
+                        <div class="p">
+                            <p><a href="signup_saler.php" class="link"> Đăng kí người bán</a> </p>
+                        </div>
                     </div>
                 </form>
             </div>

@@ -18,7 +18,7 @@ include("head.php");
                 <div style="margin:10px 0;">
                     <h3 class="title"> Đăng kí FDID </h3>
                 </div>
-                <form class="form-signin" action="process_signup_user.php" method="post">
+                <form class="form-signin" action="process_signup_saler.php" method="post">
                         <div class="form-space input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-user"></span>

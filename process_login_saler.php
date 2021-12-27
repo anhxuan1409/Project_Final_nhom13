@@ -14,7 +14,9 @@
             die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
         }
         // Bước 02: Thực hiện truy vấn
-        $sql = "SELECT * FROM db_saler WHERE saler_email = '$email' AND saler_pass='$pass'";
+        $pass_1= md5($pass);
+        echo $pass_1;
+        $sql = "SELECT * FROM db_saler WHERE saler_email = '$email' AND saler_pass='$pass_1'";
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
         // Nghiêm trọng: lỗi SQL Injection
 
@@ -31,6 +33,6 @@
         // Bước 03: Đóng kết nối
         mysqli_close($conn);
     }else{
-        header("location:login_saler.php");
+        header("location: login_saler.php");
     }
 ?>
