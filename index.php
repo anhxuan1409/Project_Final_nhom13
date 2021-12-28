@@ -1,6 +1,10 @@
 <?php
 include("head.php");
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76_anhxuan_1951061136
     <header class="container-fluid">
         <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex align-items-center d-flex justify-content-center">
             <div class="container-fluid" style="margin-left: 30%;">

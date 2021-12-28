@@ -5,7 +5,10 @@ if (!isset($_SESSION['isLoginOK'])) {
     header("location:login.php");
 }
 ?>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 76_anhxuan_1951061136
 <!DOCTYPE html>
 <html lang="en">
 
@@ -27,7 +30,7 @@ if (!isset($_SESSION['isLoginOK'])) {
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 5px;">
         <div class="container-fluid" style="justify-content: center;justify-items: center;">
-            <a class="navbar-brand" href="home.html"><img src="documents/foody.png" class="img-fluid"></a>
+            <a class="navbar-brand" href="home.php"><img src="documents/foody.png" class="img-fluid"></a>
         </div>
     </nav>
 

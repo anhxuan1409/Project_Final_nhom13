@@ -1,6 +1,10 @@
 <?php
     include("../head.php");
 ?>
+<<<<<<< HEAD
+=======
+
+>>>>>>> 76_anhxuan_1951061136
     <div style="top: 0px; width: 100%; background-color: #D34836; height: 5px;"></div>
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 5px;">
@@ -54,4 +58,8 @@
             </div>
         </div>
     </div>
+<<<<<<< HEAD
 </div>
+=======
+</div>
+>>>>>>> 76_anhxuan_1951061136

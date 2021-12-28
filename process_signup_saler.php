@@ -38,7 +38,11 @@
         if($result02 == true){
             header("location: login_saler.php");
         }else{
+<<<<<<< HEAD
             $error = "Đăng kí không thành công, xin mời kiểm tra lại ....";
+=======
+            $error = "Không thể đăng kí, vui lòng kiểm tra ....";
+>>>>>>> 76_anhxuan_1951061136
             header("location: signup_saler.php?error=$error");
     }
     
