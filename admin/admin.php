@@ -21,7 +21,6 @@
                     <tr>
                         <th scope="col">Mã người mua</th>
                         <th scope="col">Họ và tên</th>
-                        <th scope="col">Mã đơn</th>
                         <th scope="col">Số di động</th>
                         <th scope="col">Email</th>
                         <th scope="col">Địa chỉ</th>
@@ -35,8 +34,6 @@
                     <tr>
                         <th scope="col">Mã người bán</th>
                         <th scope="col">Họ và tên</th>
-                        <th scope="col">Số lượng sản phẩm</th>
-                        <th scope="col">Mã đơn</th>
                         <th scope="col">Số di động</th>
                         <th scope="col">Email</th>
                         <th scope="col">Địa chỉ</th>

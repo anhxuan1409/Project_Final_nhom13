@@ -1,9 +1,9 @@
 <?php
 session_start();
-include("connection.php");
-include("head.php");
+include("../connection.php");
+include("../head.php");
 if (!isset($_SESSION['LoginSl'])) {
-    header("location:login_saler.php");
+    header("location:../login_saler.php");
 }
 ?>
 
@@ -12,7 +12,7 @@ if (!isset($_SESSION['LoginSl'])) {
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light" style="margin-top: 5px;">
     <div class="container-fluid" style="justify-content: center;justify-items: center;">
-        <a class="navbar-brand" href="#"><img src="documents/foody.png" class="img-fluid"></a>
+        <a class="navbar-brand" href="saler.php"><img src="../documents/foody.png" class="img-fluid"></a>
     </div>
 </nav>
 
@@ -33,19 +33,19 @@ if (!isset($_SESSION['LoginSl'])) {
 
             </a></h5>
         <div>
-            <a class="btn btn-danger" href="p_sl/add_food.php">Thêm</a>
-            <a class="btn btn-danger" href="p_sl/order.php">Đơn hàng</a>
+            <a class="btn btn-danger" href="#">Đơn hàng</a>
+            <a class="btn btn-danger" href="../saler.php">Thêm</a>
         </div>
         <table class="table" style="font-size:13px">
             <thead>
                 <tr>
-                    <th scope="col">Mã sản phẩm</th>
+                    <th scope="col">Mã khách</th>
+                    <th scope="col">Địa chỉ</th>
+                    <th scope="col">Mã hóa đơn</th>
                     <th scope="col">Tên sản phẩm</th>
-                    <th scope="col">Giá bán</th>
                     <th scope="col">Hình ảnh</th>
                     <th scope="col">Só lượng</th>
-                    <th scope="col">Sửa</th>
-                    <th scope="col">Xóa</th>
+                    <th scope="col">Thành tiền</th>
                 </tr>
             </thead>
             <tbody>
@@ -72,8 +72,6 @@ if (!isset($_SESSION['LoginSl'])) {
                                 echo "</div>";
                                 ?></td>
                             <td><?php echo $row['good_sl']; ?></td>
-                            <td><a href="p_sl/edit_food.php?id=<?php echo $row['good_id']; ?>"><i class="fas fa-pencil-alt"></i></a></td>
-                            <td><a href="p_sl/delete_food.php?id=<?php echo $row['good_id']; ?>"><i class="fas fa-trash-alt"></i></a></td>
                         </tr>
                         
                 <?php
