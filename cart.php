@@ -5,10 +5,6 @@ if (!isset($_SESSION['isLoginOK'])) {
     header("location:login.php");
 }
 ?>
-<<<<<<< HEAD
-
-=======
->>>>>>> 76_anhxuan_1951061136
 <!DOCTYPE html>
 <html lang="en">
 
