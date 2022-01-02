@@ -6,6 +6,7 @@ if (!isset($_SESSION['LoginSl'])) {
     header("location:../login_saler.php");
 }
 ?>
+
     <main>
     <div class="container">
         <h5 class="text-center text-primary mt-5">Thêm mới</h5>
