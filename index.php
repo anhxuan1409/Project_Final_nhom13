@@ -1,5 +1,5 @@
 <?php
-include("head.php");
+include("template/header.php");
 ?>
     <header class="container-fluid">
         <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex align-items-center d-flex justify-content-center">
@@ -147,223 +147,59 @@ include("head.php");
                         </ul>
                     </div>
                 </nav>
-
-                <div class="row" style="margin-top:40px;">
-
-                    <div class="col-sm-3 col-lg-2.5 zoom zoom">
-                        <div class="d-flex justify-content-center container ">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/pizza-ha-noi.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
+                <div class="row" style="margin-top:15px;justify-content: start;">
+                <?php
+                // Bước 01: Kết nối Database Server
+                $conn = mysqli_connect('localhost', 'root', '', 'foody');
+                if (!$conn) {
+                    die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
+                }
+                // Bước 02: Thực hiện truy vấn
+                $sql = "SELECT * FROM db_good";
+                $result = mysqli_query($conn, $sql);
+                // Bước 03: Xử lý kết quả truy vấn
+                if (mysqli_num_rows($result) > 0) {
+                    while ($row = mysqli_fetch_assoc($result)) {
+                ?>
+                <div class="col-sm-3 col-lg-2.5 zoom zoom">
+                        <div class=" justify-content-center align-items-cente text-center">
+                            <div class="card p-2 mt-3 bg-white"><i class="fa fa-apple"></i>
+                            <a href="" style="text-decoration: none; color: black;">
+                                            <h5>Quán bà Yến</h5>
                                         </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Pizza</h6>
+                                <?php echo "<div id='img_div'>";
+                                echo "<img src='p_sl/photo/" . $row['image'] . "' >";
+                                echo "</div>";
+                                ?>
+                                
+                                    <div>
+                                        <h6 class="mt-3 text-black-50"><?php echo $row['good_name']; ?></h6>   
+                                        <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá (VND)</span><span><?php echo $row['price']; ?></span></div>
                                     </div>
+                                    <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
+                                        
                                 </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
+                                
                             </div>
                         </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/thit_trau_gac_bep.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Thịt trấu gác bếp</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>300.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/7e0af56e-trà-sữa-tiger-sugar.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Tiger Sugar</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>50.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh-mi-thit-bo-nuong.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Bánh mì bò</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>15.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
+                    
+                        
+                <?php
+                    }
+                }
+                // Bước 04: Đóng kết nối Database Server
+                mysqli_close($conn);
+                ?>
+                <style>
+               img {
+                height: 70px;
+                width: 120px;
+                object-fit: cover;
+                padding-bottom: 15px ;}
+                </style>
+            
+                    
                 </div>
-
-                <div class="row" style="margin-top:40px;">
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh_trang.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Bánh tráng</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>10.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/bun-thai-hai-san.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Bún hải sản</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/banh-da-tron-thumbnail.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Bánh đa A. Béo</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>40.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/ga_kfc.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">KFC Định Công</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>100.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row" style="margin-top:40px;">
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/mua-cafe-trung-nguyen-2.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Cafe Trung Nguyên</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>20.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/toboki.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Tokbokki</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>25.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/xoi-yen.jpg">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Xôi Yến</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>30.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-sm-3 col-lg-2.5 zoom">
-                        <div class="d-flex justify-content-center container">
-                            <div class="card p-3 bg-white"><i class="fa fa-apple"></i>
-                                <div class="about-product text-center mt-2"><img class="img-fluid mb-3" src="documents/images/hl.png">
-                                    <div>
-                                        <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán Bà Yến</h5>
-                                        </a>
-                                        <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        <h6 class="mt-3 text-black-50">Cream HL</h6>
-                                    </div>
-                                </div>
-                                <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá</span><span>50.000 VND</span></div>
-                            </div>
-                        </div>
-                    </div>
-
-                </div>
-
             </div>
         </div>
     </div>
