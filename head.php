@@ -16,4 +16,11 @@
 
 <body>
 
-    
+    <?php
+    foreach ($_POST as $variable => $value) {
+        $_POST["$variable"] = addslashes(htmlspecialchars($value));
+    }
+    foreach ($_GET as $variable => $value) {
+        $_GET["$variable"] = addslashes(htmlspecialchars($value));
+    }
+    ?>
