@@ -43,4 +43,27 @@ require "template/header.php";
                             <button class="btn btn-lg btn-block mt-3 d-flex align-items-center mb-2 d-flex justify-content-center text-center" type="submit" name="btnSignIn" style="background-color:#0495ba;font-size: 14px;border-color:#0495ba">Đăng nhập</button>
                         </div>
                         <div class="mt-3 mb-3 justify-content-center justify-content-center text-center">
-                            
+                        <?php
+                            if (isset($_GET['error'])) {
+                                echo "<div style='color:red; margin-left: 30px'> {$_GET['error']} </div>";
+                            }
+
+                            ?>
+                        </div>
+
+                        <div class="p">
+                            <p> Bạn đã có tài khoản tại Foody.vn?<a href="signup_user.php" class="link"> Đăng ký </a> </p>
+                        </div>
+                        <div class="p">
+                            <p><a href="login_saler.php" class="link"> Đăng nhập người bán</a> </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+include("template/footer.php");
+?>
