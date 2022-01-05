@@ -196,24 +196,30 @@ if (!isset($_SESSION['isLoginOK'])) {
                 ?>
                 <div class="col-sm-3 col-lg-2.5 zoom zoom">
                         <div class=" justify-content-center align-items-cente text-center">
+                            <form action="add_cart.php" method="POST">
                             <div class="card p-2 mt-3 bg-white"><i class="fa fa-apple"></i>
                             <a href="" style="text-decoration: none; color: black;">
                                             <h5>Quán bà Yến</h5>
                                         </a>
-                                <?php echo "<div id='img_div'>";
+                                <?php echo "<div name='IMG' id='img_div'>";
                                 echo "<img src='p_sl/photo/" . $row['image'] . "' >";
                                 echo "</div>";
+                                $_SESSION ['CART'] = $row['image'];                          
                                 ?>
+
                                 
                                     <div>
-                                        <h6 class="mt-3 text-black-50"><?php echo $row['good_name']; ?></h6>   
-                                        <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá (VND)</span><span><?php echo $row['price']; ?></span></div>
+                                        <h6 name="NAME" class="mt-3 text-black-50"><?php echo $row['good_name']; ?></h6>   
+                                        <div name="PRICE" class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá (VND)</span><span><?php echo $row['price']; ?></span></div>
                                     </div>
-                                    <button type="button" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>      
+                                    <button type="button" name="BTN" class="btn btn-danger mt-2 mb-2" onclick="t();"><i class="fas fa-plus"></i></button>      
                                 </div>
+                            </form>
+                            
                                 
                             </div>
                         </div>
+
                     
                         
                 <?php
