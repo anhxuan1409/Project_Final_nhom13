@@ -12,8 +12,6 @@
 
     //Mục tiêu: CHÈN BẢN GHI ĐĂNG KÍ TÀI KHOẢN VÀO CSDL NHƯNG PHẢI KTRA XEM CÓ TỒN TẠI KO
     // Bước 01: Kết nối Database Server
-   
-   
     $conn = mysqli_connect('localhost','root','','foody');
     if(!$conn){
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
