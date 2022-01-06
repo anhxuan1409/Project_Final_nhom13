@@ -16,27 +16,4 @@
     if(!$conn){
         die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
     }
-    // Bước 02: Thực hiện truy vấn
-    $sql01 = "SELECT * FROM db_saler WHERE saler_email = '$email' OR saler_name = '$user'";
-    // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
-    // Nghiêm trọng: lỗi SQL Injection
-
-    $result01 = mysqli_query($conn,$sql01);
-    if(mysqli_num_rows($result01) > 0){
-        $error = "Tài khoản đã tồn tại!";
-        header("location: signup_saler.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
-    }else{
-        $pass_hash = password_hash($pass1, PASSWORD_DEFAULT);
-        $sql02 = "INSERT INTO db_saler (saler_name, saler_email, saler_pass) VALUES('$user', '$email', '$pass_hash')";
-        $result02 = mysqli_query($conn,$sql02);
-        if($result02 == true){
-            header("location: saler.php");
-        }else{
-            $error = "Can not insert record. Please check ....";
-            header("location: signup_saler.php?error=$error");
-    }
     
-}
-// Bước 03: Đóng kết nối
-mysqli_close($conn);
-?>
