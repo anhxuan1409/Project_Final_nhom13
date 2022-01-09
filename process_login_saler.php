@@ -30,5 +30,9 @@
             header("location: login_saler.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
         }
 
-       
+        // Bước 03: Đóng kết nối
+        mysqli_close($conn);
+    }else{
+        header("location: login_saler.php");
+    }
 ?>
