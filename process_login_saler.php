@@ -8,5 +8,17 @@
         $pass  = $_POST['txtPass'];
         //Ở đây còn phải kiểm tra người dùng đã nhập chưa
 
+        // Bước 01: Kết nối Database Server
+        $conn = mysqli_connect('localhost','root','','foody');
+        if(!$conn){
+            die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
+        }
+        // Bước 02: Thực hiện truy vấn
+        $pass_1= md5($pass);
+        echo $pass_1;
+        $sql = "SELECT * FROM db_saler WHERE saler_email = '$email' AND saler_pass='$pass_1'";
+        // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
+        // Nghiêm trọng: lỗi SQL Injection
+
         
 ?>
