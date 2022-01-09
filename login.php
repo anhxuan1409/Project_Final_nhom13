@@ -51,4 +51,19 @@ require "template/header.php";
                             ?>
                         </div>
 
-                        
+                        <div class="p">
+                            <p> Bạn đã có tài khoản tại Foody.vn?<a href="signup_user.php" class="link"> Đăng ký </a> </p>
+                        </div>
+                        <div class="p">
+                            <p><a href="login_saler.php" class="link"> Đăng nhập người bán</a> </p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
+<?php
+
+?>
