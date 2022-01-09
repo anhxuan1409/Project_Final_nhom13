@@ -20,5 +20,15 @@
         // Ở đây còn có các vấn đề về tính hợp lệ dữ liệu nhập vào FORM
         // Nghiêm trọng: lỗi SQL Injection
 
-        
+        $result = mysqli_query($conn,$sql);
+        if(mysqli_num_rows($result) > 0){
+            // CẤP THẺ LÀM VIỆC
+            $_SESSION['LoginSl'] = $email;
+            header("location: saler.php"); //Chuyển hướng về Trang quản trị
+        }else{
+            $error = "Bạn nhập thông tin Email hoặc mật khẩu chưa chính xác";
+            header("location: login_saler.php?error=$error"); //Chuyển hướng, hiển thị thông báo lỗi
+        }
+
+       
 ?>
