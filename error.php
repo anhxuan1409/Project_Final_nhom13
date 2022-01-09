@@ -15,5 +15,5 @@ include("head.php");
     </div>
 </main>
 <?php
-include("template/footer.php");
+
 ?>
