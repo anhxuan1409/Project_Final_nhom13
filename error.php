@@ -8,12 +8,3 @@ include("head.php");
         <a class="navbar-brand" href="#"><img src="documents/foody.png" class="img-fluid"></a>
     </div>
 </nav>
-<main>
-    <div class="container mb-5 mt-5">
-        <p class="h5 text-center text-warning mt-5">ERROR 404</p>
-
-    </div>
-</main>
-<?php
-include("template/footer.php");
-?>
