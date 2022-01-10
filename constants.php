@@ -12,7 +12,7 @@ if(!isset($_SESSION)){
 
     $mysqli = new mysqli($localhost, $username, $password, $db_name);
     $conn = mysqli_connect($localhost,$username, $password , $db_name  ) ; //Database Connection
-    define('SITEURL', 'http://localhost/PROJECT/');
+    define('SITEURL', 'http://localhost/Project_Final_nhom13/');
 
     
 ?>

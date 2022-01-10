@@ -4,7 +4,7 @@ include("../constants.php");
 ?>
 <?php
 if (!isset($_SESSION['login'])) {
-    header("Location:admin.php");
+    header("Location:saler.php");
 }
 
 ?>
@@ -17,6 +17,7 @@ if (!isset($_SESSION['login'])) {
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="shortcut icon" href="../img/unnamed(1).png" type="image/x-icon" />
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="login.css">
     <title>Foody</title>
@@ -25,7 +26,6 @@ if (!isset($_SESSION['login'])) {
 <body>
 
     <header class="my-header">
-
         <div class="col-md-12">
             <div class="row">
                 <div class="col-md-3">

@@ -4,9 +4,6 @@ ob_start();
 ?>
 <div class="container-fluid ms-3">
     <div class="row mt-5">
-        <div class="col d-flex"><a href="saler.php"><i class="fas fa-chevron-left "></i></a>
-            <h4 class="ms-2">Trở lại trang chủ</h4>
-        </div>
         <div class="col text-end me-3"><a href="food.php"><button class="btn btn-outline-danger" type="submit">Hủy</button></a></div>
     </div>
     <div class="row me-3">

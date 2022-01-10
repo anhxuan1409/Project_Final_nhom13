@@ -8,7 +8,7 @@ include("index.php");
         <div class="col d-flex"><a href="index.php" class="text-danger"><i class="fas fa-chevron-left "></i></a>
             <h4 class="ms-2">Trở lại</h4>
         </div>
-        <div class="col text-end"><a href="./index.php"><button class="btn btn-outline-danger" type="submit">Hủy</button></a></div>
+        <div class="col text-end me-3"><a href="./index.php"><button class="btn btn-outline-danger" type="submit">Hủy</button></a></div>
     </div>
     <?php
 
@@ -19,7 +19,7 @@ include("index.php");
     }
 
     ?>
-    <div class="row">
+    <div class="row ms-3 me-3">
         <div class="col border p-3 rounded-2 mt-3">
             <form method="POST" class="row g-3 " enctype="multipart/form-data">
                 <div class="col-md-4">

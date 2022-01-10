@@ -8,30 +8,12 @@ $title = "Saler";
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/unnamed(1).png" type="image/x-icon" />
     <link rel="stylesheet" href="index.css">
-    <title></title>
+    <title>Foody</title>
 </head>
 
 <body>
-
-    <!-- <div class="admin">
-        <form class="form-horizontal" method="post">
-            <div class="form-group">
-                
-                <div class="col-md-4">
-                    
-                </div>
-            </div>
-            <div class="form-group">
-                
-                <div class="col-md-4">
-                    
-                </div>
-            </div>
-            <button type="submit" class="btn btn-primary" >Đăng nhập</button>
-        </form> -->
-
-
     <div class="container">
         <div class="row">
             <div class="col-md-6 offset-md-3">
