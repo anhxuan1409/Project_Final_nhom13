@@ -1,59 +1,8 @@
 <?php
-include("template/header.php");
+include('header.php')
 ?>
-    <header class="container-fluid">
-        <div class="navbar fixed-top navbar-expand-lg navbar-light bg-light d-flex align-items-center d-flex justify-content-center">
-            <div class="container-fluid" style="margin-left: 30%;">
-                <a class="navbar-brand " href="#"><img src="documents/foody.png" class="img-fluid"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
 
-                <div class="collapse navbar-collapse " id="navbarSupportedContent">
-                    <ul class="navbar-nav  ">
-
-                        <li class="nav-item dropdown mt-sm-1" style="font-size: 18px;">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Vị trí</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Hà Nội</a></li>
-                                <li><a class="dropdown-item" href="#">TP. Hò Chí Minh</a></li>
-                                <li>
-                            </ul>
-                        </li>
-
-                        <li class="nav-item dropdown  mt-sm-1 " style="font-size: 18px;">
-                            <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Loại hình</a>
-                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                <li><a class="dropdown-item" href="#">Đồ ăn</a></li>
-                                <li><a class="dropdown-item" href="#">Đồ uống</a></li>
-                            </ul>
-                        </li>
-
-                        <form class="d-flex">
-                            <div class="input-group ">
-                                <input type="text" class="form-control mt-sm-2" aria-label="Recipient's username" aria-describedby="basic-addon2" style="height: 30px;">
-                                <div class="input-group-append">
-                                    <span class="input-group-text mt-md-2" id="basic-addon2"><i class="fas fa-search"></i></span>
-                                </div>
-                            </div>
-                        </form>
-
-                        <ul class="navbar-nav  ">
-                            <li class="nav-item  mt-sm-1 " style="font-size: 18px;">
-                                <a class="nav-link active" aria-current="page" href="login.php">Đăng nhập</a>
-                            </li>
-                            <li class="nav-item  mt-sm-1 " style="font-size: 20px;">
-                                <a class="nav-link active" href="#"><i class="far fa-plus-square" onclick="alert('Bạn chưa đăng nhập!');"></i></a>
-                            </li>
-                        </ul>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </header>
-
-    <div class="slide container-fluid">
+<div class="slide container-fluid">
         <div class="col-lg-12">
             <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
                 <div class="carousel-indicators">
@@ -63,19 +12,19 @@ include("template/header.php");
                 </div>
                 <div class="carousel-inner ">
                     <div class="carousel-item active" data-bs-interval="10000">
-                        <img src="documents/slide/foody1.png" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="img/maxresdefault.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item" data-bs-interval="2000">
-                        <img src="documents/slide/foody2.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="img/occhao.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
                     </div>
                     <div class="carousel-item">
-                        <img src="documents/slide/foody3.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
+                        <img src="img/photo3jpg_822.jpg" class="d-block img-fluid rounded mx-auto d-block" style="width: 65%;">
                         <div class="carousel-caption d-none d-md-block">
 
                         </div>
@@ -93,6 +42,8 @@ include("template/header.php");
         </div>
 
     </div>
+
+
 
     <div class="container p-lg-3">
         <div class="row justify-content-md-center">
@@ -149,54 +100,30 @@ include("template/header.php");
                 </nav>
                 <div class="row" style="margin-top:15px;justify-content: start;">
                 <?php
-                // Bước 01: Kết nối Database Server
-                $conn = mysqli_connect('localhost', 'root', '', 'foody');
-                if (!$conn) {
-                    die("Kết nối thất bại. Vui lòng kiểm tra lại các thông tin máy chủ");
-                }
-                // Bước 02: Thực hiện truy vấn
-                $sql = "SELECT * FROM db_good";
-                $result = mysqli_query($conn, $sql);
-                // Bước 03: Xử lý kết quả truy vấn
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                ?>
-                <div class="col-sm-3 col-lg-2.5 zoom zoom">
-                        <div class=" justify-content-center align-items-cente text-center">
-                            <div class="card p-2 mt-3 bg-white"><i class="fa fa-apple"></i>
-                            <a href="" style="text-decoration: none; color: black;">
-                                            <h5>Quán bà Yến</h5>
+
+                                $sql = "SELECT * FROM foods limit 8 ";
+                                $res = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_array($res)) { ?>
+
+
+                                    <div class="col-md-3 mb-5 text-center zoom zoom">
+                                        <a href="food.php?foodisbn=<?php echo $row['food_isbn']; ?>"  class=" text-decoration-none text-dark">
+                                            <div class="card" style="height: 23rem;">
+                                                <img style="height: 75%;width: 100%;object-fit: cover; padding-bottom: 15px ;" src="<?php echo $row['food_image']; ?>">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><?php echo $row['food_title'] ?></h5>
+                                                    <h5 class="card-title"><?php echo $row['food_price'] ?></h5>
+                                                </div>
+                                            </div>
                                         </a>
-                                <?php echo "<div id='img_div'>";
-                                echo "<img src='p_sl/photo/" . $row['image'] . "' >";
-                                echo "</div>";
-                                ?>
-                                
-                                    <div>
-                                        <h6 class="mt-3 text-black-50"><?php echo $row['good_name']; ?></h6>   
-                                        <div class="d-flex justify-content-between total font-weight-bold mt-4"><span>Giá (VND)</span><span><?php echo $row['price']; ?></span></div>
+
                                     </div>
-                                    <button type="button" class="btn btn-danger mt-2 mb-2" onclick="alert('Bạn chưa đăng nhập!');"><i class="fas fa-plus"></i></button>
-                                        
+                                <?php }
+                                ?>
+                <div class="col text-end">
+                                    <a href="foods.php" class="text-decoration-none text-danger">Xem Thêm <i class="fas fa-caret-right"></i></a>
                                 </div>
-                                
-                            </div>
-                        </div>
-                    
-                        
-                <?php
-                    }
-                }
-                // Bước 04: Đóng kết nối Database Server
-                mysqli_close($conn);
-                ?>
-                <style>
-               img {
-                height: 70px;
-                width: 120px;
-                object-fit: cover;
-                padding-bottom: 15px ;}
-                </style>
             
                     
                 </div>
@@ -204,6 +131,8 @@ include("template/header.php");
         </div>
     </div>
 
-    <?php
-    include("template/footer.php");
-    ?>
+
+
+<?php
+include("footer.php");
+?>
