@@ -26,7 +26,7 @@ require "template/header.php";
                             </span>
                             <input type="email" id="inputEmail" name="txtEmail" class="form-control" placeholder="Email address" required autofocus>
 
-                        </div>
+                            </div>
                         <div class="form-space input-group">
                             <span class="input-group-addon">
                                 <span class="glyphicon glyphicon-lock"></span>

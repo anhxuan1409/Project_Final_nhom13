@@ -5,7 +5,8 @@ if($count==1){
   $_SESSION ['username']=$email;
   header("refresh:1;url=home.php");
   }
-else{
-   $_SESSION['isLoginOK']=false;
-   header("refresh:2;url=login.php");}
+  else{
+    $_SESSION['isLoginOK']=false;
+    header("refresh:2;url=login.php");
+  }
 ?>
