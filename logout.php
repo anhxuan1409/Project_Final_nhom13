@@ -1,9 +1,5 @@
 <?php
-    session_start();
+include('constants.php');
+session_destroy();
 
-    if(isset($_SESSION['isLoginOK'])){
-        unset($_SESSION['isLoginOK']);
-        header("location:login.php");
-    }
-
-?>
+header('Location:'.SITEURL.'login.php');
