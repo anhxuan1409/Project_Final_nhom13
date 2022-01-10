@@ -47,10 +47,10 @@ ob_start();
     <div style="top: 0px; width: 100%; background-color: #D34836; height: 5px;"></div>
     <div class="container-fluid mt-4 mb-4">
         <div class="row">
-            <div class="col-3">
+            <div class="col-3 ms-2">
                 <a href="index.php"><img src="https://www.foody.vn/style/images/logo/foody-vn.png" class="img-fluid" ></a>
             </div>
-            <div class="col-5">
+            <div class="col-4">
                 <form action="search.php" method="POST" class="d-flex boder">
 
                     <input type="search" name="search" class="form-control" placeholder="Tìm kiếm..." required>

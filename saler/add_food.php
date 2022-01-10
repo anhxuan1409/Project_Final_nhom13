@@ -2,14 +2,14 @@
 include("./header.php");
 ob_start();
 ?>
-<div class="container-fluid">
+<div class="container-fluid ms-3">
     <div class="row mt-5">
         <div class="col d-flex"><a href="saler.php"><i class="fas fa-chevron-left "></i></a>
             <h4 class="ms-2">Trở lại trang chủ</h4>
         </div>
-        <div class="col text-end"><a href="./admin_food.php"><button class="btn btn-outline-danger" type="submit">Hủy</button></a></div>
+        <div class="col text-end me-3"><a href="food.php"><button class="btn btn-outline-danger" type="submit">Hủy</button></a></div>
     </div>
-    <div class="row">
+    <div class="row me-3">
         <div class="col border p-3 rounded-2 mt-3">
             <form method="POST" class="row g-3 " enctype="multipart/form-data">
                 <div class="col-md-4">
@@ -79,12 +79,12 @@ if (isset($_POST['submit'])) {
     $idAd = $_POST['idAd'];
 
 
-    $target_dir = "../img/img_addfood/"; //chỉ định thư mục nơi tệp sẽ được đặt
+    $target_dir = "img/img_addfood/"; //chỉ định thư mục nơi tệp sẽ được đặt
     $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); //chỉ định đường dẫn của tệp sẽ được tải lên
     $uploadOk = 1; //chưa được sử dụng (sẽ được sử dụng sau)
     $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); //giữ phần mở rộng tệp của tệp 
 
-    $target_dir_2 = "../img/img_addfood/";
+    $target_dir_2 = "img/img_addfood/";
     $target_file_2 = $target_dir_2 . basename($_FILES["fileToUpload"]["name"]); //chỉ định đường dẫn của tệp sẽ được tải lên
 
 

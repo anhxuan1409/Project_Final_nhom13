@@ -15,9 +15,9 @@ include('index.php');
             <thead>
                 <tr>
                     <th scope="col">STT</th>
-                    <th scope="col">ID người quản lý</th>
-                    <th scope="col">Tên người quản lý</th>
-                    <th scope="col">Mã người quản trị</th>
+                    <th scope="col">ID người bán</th>
+                    <th scope="col">Tên người bán</th>
+                    <th scope="col">Mã người bán</th>
                     <th scope="col"> Mật khẩu</th>
                     <th scope="col"> sửa</th>
                     <th scope="col"> Xóa</th>
