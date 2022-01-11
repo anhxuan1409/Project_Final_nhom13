@@ -88,12 +88,12 @@ ob_start();
 		$food_price = $_POST['food_price'];
 		$idAd  = $_POST['idAd'];
 
-		$target_dir = "../img/img-index/"; //chỉ định thư mục nơi tệp sẽ được đặt
+		$target_dir = "../img/"; //chỉ định thư mục nơi tệp sẽ được đặt
 		$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]); //chỉ định đường dẫn của tệp sẽ được tải lên
 		$uploadOk = 1; //chưa được sử dụng (sẽ được sử dụng sau)
 		$imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION)); //giữ phần mở rộng tệp của tệp 
 
-		$target_dir_2 = "img/img-index/";
+		$target_dir_2 = "img/";
 		$target_file_2 = $target_dir_2 . basename($_FILES["fileToUpload"]["name"]); //chỉ định đường dẫn của tệp sẽ được tải lên
 
 
@@ -142,13 +142,13 @@ ob_start();
 				//REdirect to Manage Admin Page with Success Message
 				$_SESSION['edit'] = "<div class='success'> Changed Successfully. </div>";
 				//Redirect the User
-				header('location:admin_food.php');
+				header('location:food.php');
 			} else {
 				//Display Error Message
 				//REdirect to Manage Admin Page with Error Message
 				$_SESSION['edit'] = "<div class='error'>Failed to Change . </div>";
 				//Redirect the User
-				header('location:admin_edit.php');
+				header('location:edit.php');
 			}
 		} else {
 			echo "sai";

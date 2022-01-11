@@ -56,7 +56,7 @@ include('header.php')
                     </h3>
                     <ul class="category-list">
                         <li class="category-item ">
-                            <a href="#" class="category-item__link">Khuyễn mãi</a>
+                            <a href="#" class="category-item__link">Khuyến mãi</a>
                         </li>
                         <li class="category-item">
                             <a href="#" class="category-item__link">Blogs</a>

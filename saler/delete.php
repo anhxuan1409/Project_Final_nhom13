@@ -7,5 +7,5 @@
 		echo "delete data unsuccessfully " . mysqli_error($conn);
 		exit;
 	}
-	header("Location: admin_food.php");
+	header("Location: food.php");
 ?>
