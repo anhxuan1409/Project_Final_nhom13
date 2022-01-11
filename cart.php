@@ -59,14 +59,14 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
                     </tr>
             <?php }
             } ?>
-
+<!-- 
             <tr>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
                 <th>&nbsp;</th>
                 <th><?php echo $_SESSION['total_items_cart']; ?></th>
                 <th><?php echo "đ" . $_SESSION['total_price_cart']; ?></th>
-            </tr>
+            </tr> -->
         </table>
         <div class="row mb-3">
             <div class="col-4 text-center">

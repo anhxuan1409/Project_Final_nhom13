@@ -32,13 +32,13 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
         <?php }
         } ?>
 
-        <tr>
+        <!-- <tr>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
             <th>&nbsp;</th>
             <th><?php echo $_SESSION['total_items_cart']; ?></th>
             <th><?php echo "$" . $_SESSION['total_price_cart']; ?></th>
-        </tr>
+        </tr> -->
     </table>
     <div class="container">
         <div class="row">
@@ -65,7 +65,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
         </div>
 
     </div>
-    <p style="padding-left: 50px;" class="lead">Vui lòng nhấn ĐẶT HÀNG để xác nhận giao dịch mua hàng của bạn hoặc tiếp tục mua sắm để thêm hoặc xóa các mục.</p>
+    <p class="lead ms-3 mb-3 mt-3">Vui lòng nhấn ĐẶT HÀNG để xác nhận giao dịch mua hàng của bạn hoặc tiếp tục mua sắm để thêm hoặc xóa các mục.</p>
 <?php } else {
     echo "<p class=\"text-danger\">Giỏ của bạn trống trơn! Hãy chắc chắn rằng bạn thêm một số sách trong đó!</p>";
 }
