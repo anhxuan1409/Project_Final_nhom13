@@ -68,7 +68,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
                 <th><?php echo "đ" . $_SESSION['total_price_cart']; ?></th>
             </tr>
         </table>
-        <div class="row">
+        <div class="row mb-3">
             <div class="col-4 text-center">
                 <input type="submit" class="btn btn-outline-danger" name="save_change" value="Lưu ">
             </div>
@@ -96,7 +96,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
     }
 
 } else {
-    echo "<p class=\"text-danger\">Giỏ của bạn trống trơn! Hãy chắc chắn rằng bạn thêm một số sách trong đó!</p>";
+    echo "<p class=\"text-danger\">Giỏ của bạn trống! Hãy chắc chắn rằng bạn thêm một số sách trong đó!</p>";
 }
 
 include('footer.php');
