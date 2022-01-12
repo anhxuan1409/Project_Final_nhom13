@@ -42,6 +42,35 @@ include('header.php')
         </div>
 
      </div>
+     <div class="container p-lg-3">
+        <div class="row justify-content-md-center">
+
+            <div class="col-sm-3 col-lg-2 ">
+                <nav class="category" style="font-size: 18px;font-weight: 100; ">
+                    <h3 class="category__heading" style="background-color: whitesmoke;">
+                        <i class="fas fa-utensils"></i>
+                        <i class="fas category__heading-icon"></i>Danh mục
+                    </h3>
+                    <ul class="category-list">
+                        <li class="category-item ">
+                            <a href="#" class="category-item__link">Khuyến mãi</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-item__link">Blogs</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-item__link">Bình luận</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-item__link">TV</a>
+                        </li>
+                        <li class="category-item">
+                            <a href="#" class="category-item__link">12/12</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
 
 
 
