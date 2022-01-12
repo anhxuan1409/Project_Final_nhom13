@@ -44,5 +44,36 @@ ob_start();
             ?>
         </ul>
     </div>
+    <div style="top: 0px; width: 100%; background-color: #D34836; height: 5px;"></div>
+    <div class="container-fluid mt-4 mb-4">
+        <div class="row">
+            <div class="col-3 ms-2">
+                <a href="index.php"><img src="https://www.foody.vn/style/images/logo/foody-vn.png" class="img-fluid" ></a>
+            </div>
+            <div class="col-4">
+                <form action="search.php" method="POST" class="d-flex boder">
+
+                    <input type="search" name="search" class="form-control" placeholder="Tìm kiếm..." required>
+                    <input type="submit" name="submit" value="Tìm kiếm" class="btn btn-outline-danger">
+                </form>
+            </div>
+            <div class="col-2">
+                <div class="row">
+
+
+                </div>
+            </div>
+
+            <div class="col-2">
+                <a href="cart.php" class="text-decoration-none text-danger">
+                    <h5>
+                        <i class="fas fa-shopping-cart"></i> Giỏ hàng
+
+                    </h5>
+                </a>
+            </div>
+        </div>
+    </div>
+
 
 
