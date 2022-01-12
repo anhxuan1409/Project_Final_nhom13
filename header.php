@@ -19,4 +19,30 @@ ob_start();
     <link href="assests/image.css" rel="stylesheet" type="text/css">
     <title>Foody</title>
 </head>
+<body>
+    <div class="container-fluid d-flex justify-content-between" style="background-color: black">
+      
+        <ul class="nav ">
+            <li class="nav-item">
+                <a href="check_cart.php" class="nav-link text-decoration-none text-muted"><i class="fas fa-box-open"></i> Kiểm tra đơn hàng</a>
+            </li>
+
+            <?php
+            if (isset($_SESSION['user'])) { ?>
+                <li class="nav-item">
+                    <a href="./logout.php" class="nav-link text-decoration-none text-muted text-center "><i class="fas fa-sign-in-alt"></i> Đăng Xuất </a>
+                    <div class="text-muted"><?php echo $_SESSION['user'] ?></div>
+                </li>
+            <?php } else { ?>
+                <li class="nav-item">
+                    <a href="./register.php" class="nav-link text-decoration-none text-muted"><i class="fas fa-user-plus"></i> Đăng Ký</a>
+                </li>
+                <li class="nav-item">
+                    <a href="./login.php" class="nav-link text-decoration-none text-muted "><i class="fas fa-sign-in-alt"></i> Đăng nhập </a>
+                </li>
+            <?php }
+            ?>
+        </ul>
+    </div>
+
 
