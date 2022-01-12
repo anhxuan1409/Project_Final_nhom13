@@ -35,3 +35,6 @@ if (!$result) {
     </div>
 
 </div>
+<?php
+include("footer.php");
+?>
