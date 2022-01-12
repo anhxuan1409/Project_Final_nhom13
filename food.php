@@ -59,3 +59,7 @@ if (!$row) {
 
 
 </div>
+
+<?php
+require "footer.php";
+?>
