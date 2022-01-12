@@ -70,6 +70,68 @@ include('header.php')
                     </ul>
                 </nav>
             </div>
+	 <div class="col-sm-9 col-lg-10">
+                <nav class="d-flex align-items-cente text-center ps-3" style="background-color: whitesmoke;">
+                    <button class="btn btn-secondary btn btn btn-danger btn-sm" style="font-size: 18px;font-weight: 100;color: black;">Mới nhất</button>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle btn btn btn-danger" type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;font-weight: 100;color: black;">
+                            Ẩm thực
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Món Bắc</a></li>
+                            <li><a class="dropdown-item" href="#">Món Trung</a></li>
+                            <li><a class="dropdown-item" href="#">Món Nam</a></li>
+                        </ul>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-secondary btn-sm dropdown-toggle btn btn btn-danger " type="button" data-bs-toggle="dropdown" aria-expanded="false" style="font-size: 18px;font-weight: 100;color: black;">
+                            Danh mục
+                        </button>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Đồ ăn nhanh</a></li>
+                            <li><a class="dropdown-item" href="#">Đồ ăn vặt</a></li>
+                            <li><a class="dropdown-item" href="#">Đồ ăn cho bé</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <div class="row" style="margin-top:15px;justify-content: start;">
+                <?php
+
+                                $sql = "SELECT * FROM foods limit 8 ";
+                                $res = mysqli_query($conn, $sql);
+
+                                while ($row = mysqli_fetch_array($res)) { ?>
+
+
+                                    <div class="col-md-3 mb-5 text-center zoom zoom">
+                                        <a href="food.php?foodisbn=<?php echo $row['food_isbn']; ?>"  class=" text-decoration-none text-dark">
+                                            <div class="card" style="height: 23rem;">
+                                                <img style="height: 75%;width: 100%;object-fit: cover; padding-bottom: 15px ;" src="<?php echo $row['food_image']; ?>">
+                                                <div class="card-body">
+                                                    <h5 class="card-title"><?php echo $row['food_title'] ?></h5>
+                                                    <h5 class="card-title"><?php echo $row['food_price'] ?></h5>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                <?php }
+                                ?>
+                <div class="col text-end">
+                                    <a href="foods.php" class="text-decoration-none text-danger">Xem Thêm <i class="fas fa-caret-right"></i></a>
+                                </div>
+            
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+<?php
+include("footer.php");
+?>
 
 
 
