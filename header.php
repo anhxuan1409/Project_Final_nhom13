@@ -19,7 +19,6 @@ ob_start();
     <link href="assests/image.css" rel="stylesheet" type="text/css">
     <title>Foody</title>
 </head>
-
 <body>
     <div class="container-fluid d-flex justify-content-between" style="background-color: black">
       
@@ -75,3 +74,6 @@ ob_start();
             </div>
         </div>
     </div>
+
+
+

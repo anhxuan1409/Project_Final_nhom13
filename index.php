@@ -41,11 +41,8 @@ include('header.php')
             </div>
         </div>
 
-    </div>
-
-
-
-    <div class="container p-lg-3">
+     </div>
+     <div class="container p-lg-3">
         <div class="row justify-content-md-center">
 
             <div class="col-sm-3 col-lg-2 ">
@@ -73,8 +70,7 @@ include('header.php')
                     </ul>
                 </nav>
             </div>
-
-            <div class="col-sm-9 col-lg-10">
+	 <div class="col-sm-9 col-lg-10">
                 <nav class="d-flex align-items-cente text-center ps-3" style="background-color: whitesmoke;">
                     <button class="btn btn-secondary btn btn btn-danger btn-sm" style="font-size: 18px;font-weight: 100;color: black;">Mới nhất</button>
                     <div class="btn-group">
@@ -136,3 +132,8 @@ include('header.php')
 <?php
 include("footer.php");
 ?>
+
+
+
+
+    
