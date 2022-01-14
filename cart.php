@@ -70,7 +70,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
         </table>
         <div class="row mb-3">
             <div class="col-4 text-center">
-                <input type="submit" class="btn btn-outline-danger" name="save_change" value="Lưu ">
+                <input type="submit" class="btn btn-outline-danger" name="save_change" value="Lưu " location.href = "cart.php";>
             </div>
             <div class="col-4 text-center">
                 <a href="foods.php" class="btn btn-outline-danger">Tiếp tục xem</a>
@@ -84,7 +84,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
 
 
 <?php
-    // if save change button is clicked , change the qty of each bookisbn
+    // if save change button is clicked , change the qty of each foodisbn
     if (isset($_POST['save_change'])) {
         foreach ($_SESSION['cart_to_buy'] as $isbn => $qty) {
             if ($_POST[$isbn] == '0') {
@@ -94,6 +94,7 @@ if (isset($_SESSION['cart_to_buy']) && (array_count_values($_SESSION['cart_to_bu
             }
         }
     }
+
 
 } else {
     echo "<p class=\"text-danger\">Giỏ của bạn trống! Hãy chắc chắn rằng bạn thêm một số sách trong đó!</p>";

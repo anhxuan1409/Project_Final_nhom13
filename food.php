@@ -13,7 +13,7 @@ if (!$result) {
 
 $row = mysqli_fetch_array($result);
 if (!$row) {
-    echo "sách trống";
+    echo "Trống";
     exit;
 }
 
